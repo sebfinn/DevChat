@@ -43,5 +43,27 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb138320310048233</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>138320310048233</string>
+    <key>FacebookDisplayName</key>
+    <string>Dev Chat</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-api</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
+    </array>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We are stalkers, please give us accsess to your photos</string>
 </dict>
 </plist>

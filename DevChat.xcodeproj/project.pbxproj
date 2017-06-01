@@ -19,6 +19,10 @@
 		CF9B91841E3AE9090098FDD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9B91821E3AE9090098FDD9 /* Main.storyboard */; };
 		CF9B91861E3AE9090098FDD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9B91851E3AE9090098FDD9 /* Assets.xcassets */; };
 		CF9B91891E3AE9090098FDD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9B91871E3AE9090098FDD9 /* LaunchScreen.storyboard */; };
+		CFEC2A551EDC961E00B2AE54 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEC2A541EDC961E00B2AE54 /* FeedVC.swift */; };
+		CFEC2A571EDCBC9000B2AE54 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEC2A561EDCBC9000B2AE54 /* CircleView.swift */; };
+		CFEC2A591EDCCCBF00B2AE54 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEC2A581EDCCCBF00B2AE54 /* PostCell.swift */; };
+		CFEC2A5C1EDE7EF100B2AE54 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEC2A5B1EDE7EF100B2AE54 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		CF9B91851E3AE9090098FDD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF9B91881E3AE9090098FDD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF9B918A1E3AE9090098FDD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFEC2A541EDC961E00B2AE54 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		CFEC2A561EDCBC9000B2AE54 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		CFEC2A581EDCCCBF00B2AE54 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		CFEC2A5B1EDE7EF100B2AE54 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,8 @@
 				CF30C9901ED3E17000431394 /* RoundBtn.swift */,
 				CF30C9921ED3F74B00431394 /* FancyField.swift */,
 				CF30C9941ED3FAF500431394 /* FancyBtn.swift */,
+				CFEC2A561EDCBC9000B2AE54 /* CircleView.swift */,
+				CFEC2A581EDCCCBF00B2AE54 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -90,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				CF9B91801E3AE9090098FDD9 /* SignInVC.swift */,
+				CFEC2A541EDC961E00B2AE54 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -115,6 +126,7 @@
 		CF9B917D1E3AE9090098FDD9 /* DevChat */ = {
 			isa = PBXGroup;
 			children = (
+				CFEC2A5A1EDE7EBC00B2AE54 /* Services */,
 				CF30C98D1ED3DCEC00431394 /* Util */,
 				CF58E55F1ECE8DA10075EC86 /* Model */,
 				CF58E5611ECE8DBE0075EC86 /* Controller */,
@@ -127,6 +139,14 @@
 				CF30C9891ED10BAD00431394 /* GoogleService-Info.plist */,
 			);
 			path = DevChat;
+			sourceTree = "<group>";
+		};
+		CFEC2A5A1EDE7EBC00B2AE54 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CFEC2A5B1EDE7EF100B2AE54 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		F5C3A4F654BF7D83DFC1E225 /* Pods */ = {
@@ -263,13 +283,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFEC2A571EDCBC9000B2AE54 /* CircleView.swift in Sources */,
 				CF30C9931ED3F74B00431394 /* FancyField.swift in Sources */,
 				CF9B91811E3AE9090098FDD9 /* SignInVC.swift in Sources */,
 				CF30C9911ED3E17000431394 /* RoundBtn.swift in Sources */,
 				CF9B917F1E3AE9090098FDD9 /* AppDelegate.swift in Sources */,
+				CFEC2A5C1EDE7EF100B2AE54 /* DataService.swift in Sources */,
+				CFEC2A551EDC961E00B2AE54 /* FeedVC.swift in Sources */,
 				CF30C98C1ED3DC4200431394 /* FancyView.swift in Sources */,
 				CF30C98F1ED3DD0A00431394 /* Constants.swift in Sources */,
 				CF30C9951ED3FAF500431394 /* FancyBtn.swift in Sources */,
+				CFEC2A591EDCCCBF00B2AE54 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
