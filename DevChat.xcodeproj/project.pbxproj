@@ -23,6 +23,7 @@
 		CFEC2A571EDCBC9000B2AE54 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEC2A561EDCBC9000B2AE54 /* CircleView.swift */; };
 		CFEC2A591EDCCCBF00B2AE54 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEC2A581EDCCCBF00B2AE54 /* PostCell.swift */; };
 		CFEC2A5C1EDE7EF100B2AE54 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEC2A5B1EDE7EF100B2AE54 /* DataService.swift */; };
+		CFEC2A5E1EE0FCA500B2AE54 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEC2A5D1EE0FCA500B2AE54 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		CFEC2A561EDCBC9000B2AE54 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		CFEC2A581EDCCCBF00B2AE54 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		CFEC2A5B1EDE7EF100B2AE54 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		CFEC2A5D1EE0FCA500B2AE54 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		CF58E55F1ECE8DA10075EC86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CFEC2A5D1EE0FCA500B2AE54 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				CFEC2A571EDCBC9000B2AE54 /* CircleView.swift in Sources */,
 				CF30C9931ED3F74B00431394 /* FancyField.swift in Sources */,
 				CF9B91811E3AE9090098FDD9 /* SignInVC.swift in Sources */,
+				CFEC2A5E1EE0FCA500B2AE54 /* Post.swift in Sources */,
 				CF30C9911ED3E17000431394 /* RoundBtn.swift in Sources */,
 				CF9B917F1E3AE9090098FDD9 /* AppDelegate.swift in Sources */,
 				CFEC2A5C1EDE7EF100B2AE54 /* DataService.swift in Sources */,
