@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,8 +23,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPT-fs-oEM" customClass="FancyView" customModule="DevChat" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes-logo" translatesAutoresizingMaskIntoConstraints="NO" id="d3e-eg-Wkd">
-                                        <rect key="frame" x="112.5" y="28" width="150" height="94"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="current-events" translatesAutoresizingMaskIntoConstraints="NO" id="d3e-eg-Wkd">
+                                        <rect key="frame" x="99.5" y="14.5" width="176" height="121"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="176" id="GkG-kg-NlJ"/>
+                                            <constraint firstAttribute="height" constant="121" id="LFh-zR-pC4"/>
+                                            <constraint firstAttribute="width" secondItem="d3e-eg-Wkd" secondAttribute="height" multiplier="16:11" id="Rql-kf-00A"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.73725490196078436" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
@@ -108,6 +111,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="eVr-iJ-grT" firstAttribute="top" secondItem="t9v-ix-d9f" secondAttribute="bottom" constant="39" id="2aV-ZY-BY5"/>
                             <constraint firstItem="n3a-9n-bGB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="6hn-hi-2KJ"/>
                             <constraint firstItem="Lr2-Vm-gVu" firstAttribute="top" secondItem="hPT-fs-oEM" secondAttribute="bottom" constant="20" id="9R1-Yv-CUG"/>
                             <constraint firstItem="Lr2-Vm-gVu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DA4-Id-FsT"/>
@@ -167,6 +171,12 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="oak-tree-pic-1080x675" translatesAutoresizingMaskIntoConstraints="NO" id="to5-EJ-mbs" customClass="CircleView" customModule="DevChat" customModuleProvider="target">
+                                        <rect key="frame" x="329" y="19" width="38" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -209,6 +219,9 @@
                                                     <constraint firstAttribute="width" constant="49" id="cHI-dD-E7A"/>
                                                 </constraints>
                                                 <state key="normal" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postBtnTapped:" destination="XME-bp-zsF" eventType="touchUpInside" id="YwM-cx-JTp"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -242,14 +255,14 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jc9-1M-qya">
                                                                     <rect key="frame" x="0.0" y="0.0" width="327" height="60"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="bGW-Y2-inu" customClass="CircleView" customModule="DevChat" customModuleProvider="target">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oak-tree-pic-1080x675" translatesAutoresizingMaskIntoConstraints="NO" id="bGW-Y2-inu" customClass="CircleView" customModule="DevChat" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="60" id="6Pw-Rh-XeG"/>
                                                                                 <constraint firstAttribute="width" constant="60" id="OTA-iG-kdS"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LitCat85" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7QZ-MV-5f7">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sebastian DiPirro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7QZ-MV-5f7">
                                                                             <rect key="frame" x="60" y="0.0" width="207" height="60"/>
                                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                                             <color key="textColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -264,10 +277,10 @@
                                                                         </imageView>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="EBX-J8-2vH">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="EBX-J8-2vH">
                                                                     <rect key="frame" x="0.0" y="68" width="327" height="151"/>
                                                                 </imageView>
-                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hzj-0d-j29">
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hzj-0d-j29">
                                                                     <rect key="frame" x="0.0" y="227" width="327" height="50"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
@@ -319,6 +332,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="hzj-0d-j29" id="Hsf-1B-6mC"/>
+                                            <outlet property="likeImg" destination="M6q-VH-cY9" id="6cG-lh-wrs"/>
                                             <outlet property="likesLbl" destination="pOR-jJ-fot" id="Ghh-Vs-ZFn"/>
                                             <outlet property="postImg" destination="EBX-J8-2vH" id="Wuf-hf-GAN"/>
                                             <outlet property="profileImg" destination="bGW-Y2-inu" id="rfR-5J-9ma"/>
@@ -343,6 +357,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="captionField" destination="yfz-wq-dwm" id="XlB-jZ-oaD"/>
                         <outlet property="imageAdd" destination="bTP-XJ-fAc" id="e5f-4E-vTl"/>
                         <outlet property="tableView" destination="mB1-wC-gOV" id="Okk-E4-n0y"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="N3u-h8-QdG"/>
@@ -360,17 +375,43 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="728.79999999999995" y="31.934032983508249"/>
+            <point key="canvasLocation" x="852" y="44.527736131934034"/>
+        </scene>
+        <!--Profile PicVC-->
+        <scene sceneID="3SY-M8-mFE">
+            <objects>
+                <viewController id="hpn-ik-4r1" customClass="profilePicVC" customModule="DevChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K2K-DP-HSJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="2IS-yQ-Wkd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RAU-q6-eiM" customClass="Profile">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="nMP-Qf-bzB" customClass="CircleView" customModule="DevChat" customModuleProvider="target">
+                                <rect key="frame" x="105" y="247" width="161" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idk-fV-R8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="45"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Loading" width="1920" height="1080"/>
         <image name="add-image" width="88" height="88"/>
         <image name="add-post" width="88" height="88"/>
-        <image name="devslopes-logo" width="150" height="94"/>
+        <image name="current-events" width="453" height="313"/>
         <image name="empty-heart" width="70" height="70"/>
         <image name="f" width="352" height="328"/>
-        <image name="placeholder" width="300" height="168"/>
-        <image name="profile" width="1936" height="2592"/>
+        <image name="oak-tree-pic-1080x675" width="1080" height="675"/>
         <image name="sign-out" width="92" height="65"/>
     </resources>
 </document>

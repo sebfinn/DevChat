@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FancyField: UITextField {
+class FancyField: UITextField, UITextFieldDelegate {
 
     override func awakeFromNib() {
         super.awakeFromNib()

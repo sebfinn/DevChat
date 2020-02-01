@@ -24,6 +24,7 @@
 		CFEC2A591EDCCCBF00B2AE54 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEC2A581EDCCCBF00B2AE54 /* PostCell.swift */; };
 		CFEC2A5C1EDE7EF100B2AE54 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEC2A5B1EDE7EF100B2AE54 /* DataService.swift */; };
 		CFEC2A5E1EE0FCA500B2AE54 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEC2A5D1EE0FCA500B2AE54 /* Post.swift */; };
+		CFEC2A611EE4582E00B2AE54 /* profilePicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEC2A601EE4582E00B2AE54 /* profilePicVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		CFEC2A581EDCCCBF00B2AE54 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		CFEC2A5B1EDE7EF100B2AE54 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		CFEC2A5D1EE0FCA500B2AE54 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		CFEC2A5F1EE32ABE00B2AE54 /* DevChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DevChat.entitlements; sourceTree = "<group>"; };
+		CFEC2A601EE4582E00B2AE54 /* profilePicVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profilePicVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 			children = (
 				CF9B91801E3AE9090098FDD9 /* SignInVC.swift */,
 				CFEC2A541EDC961E00B2AE54 /* FeedVC.swift */,
+				CFEC2A601EE4582E00B2AE54 /* profilePicVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -129,6 +133,7 @@
 		CF9B917D1E3AE9090098FDD9 /* DevChat */ = {
 			isa = PBXGroup;
 			children = (
+				CFEC2A5F1EE32ABE00B2AE54 /* DevChat.entitlements */,
 				CFEC2A5A1EDE7EBC00B2AE54 /* Services */,
 				CF30C98D1ED3DCEC00431394 /* Util */,
 				CF58E55F1ECE8DA10075EC86 /* Model */,
@@ -191,19 +196,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Sebastian DiPirro";
 				TargetAttributes = {
 					CF9B917A1E3AE9090098FDD9 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 69RY2JHLT6;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
 			buildConfigurationList = CF9B91761E3AE9090098FDD9 /* Build configuration list for PBXProject "DevChat" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -287,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFEC2A571EDCBC9000B2AE54 /* CircleView.swift in Sources */,
+				CFEC2A611EE4582E00B2AE54 /* profilePicVC.swift in Sources */,
 				CF30C9931ED3F74B00431394 /* FancyField.swift in Sources */,
 				CF9B91811E3AE9090098FDD9 /* SignInVC.swift in Sources */,
 				CFEC2A5E1EE0FCA500B2AE54 /* Post.swift in Sources */,
@@ -327,20 +338,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -377,20 +397,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -423,6 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 69RY2JHLT6;
 				INFOPLIST_FILE = DevChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Finn.DevChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,6 +467,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 69RY2JHLT6;
 				INFOPLIST_FILE = DevChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Finn.DevChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";

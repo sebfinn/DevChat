@@ -12,13 +12,18 @@ import FBSDKLoginKit
 import Firebase
 import SwiftKeychainWrapper
 
-class SignInVC: UIViewController {
+class SignInVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailFeild: FancyField!
     @IBOutlet weak var pwdField: FancyField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailFeild.delegate = self
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("dismissKeyboardSignIn")))
+
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,6 +49,16 @@ class SignInVC: UIViewController {
                 self.firebaseAuth(credential)
             }
         }
+    }
+    
+    func dismissKeyboardSignIn() {
+        emailFeild.resignFirstResponder()
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailFeild.resignFirstResponder()
+        return true
     }
     
     func firebaseAuth(_ credential: FIRAuthCredential) {
